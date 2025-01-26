@@ -22,4 +22,11 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* Camera;
+
+	virtual void SetupPlayerInputComponent(class UInputComponent* MyPlayerInput) override;
+
+	void MoveForward(float Value);
+	void MoveRight(float Value);
+	void Jump();
+	void StopJump();
 };
