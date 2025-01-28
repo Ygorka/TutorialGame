@@ -10,9 +10,6 @@ APlayerCharacter::APlayerCharacter() : Super() {
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComponent"));
 	SpringArm->SetupAttachment(RootComponent);
 
-	
-
-
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("MainCamera"));
 	Camera->SetupAttachment(SpringArm);
 
@@ -54,6 +51,10 @@ void APlayerCharacter::MoveRight(float Value) {
 
 void APlayerCharacter::Jump() {
 	bPressedJump = true;
+	if (JumpAnimation) {
+		PlayAnimMontage(JumpAnimation, 1.0, NAME_None);
+	}
+	
 }
 
 void APlayerCharacter::StopJump() {

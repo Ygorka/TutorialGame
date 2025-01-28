@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "MainCharacter.generated.h"
 
+class UAnimMontage;
+
 UCLASS()
 class LESSON_API AMainCharacter : public ACharacter
 {

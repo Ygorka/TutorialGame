@@ -4,7 +4,7 @@
 #include "Tutorial/TutorialGameMode.h"
 
 ATutorialGameMode::ATutorialGameMode() {
-	ConstructorHelpers::FClassFinder<APawn> MainCharacter(TEXT("/Game/Character/BP_PlayerCharacter"));
+	ConstructorHelpers::FClassFinder<APawn> MainCharacter(TEXT("/Game/Character/BP/BP_PlayerCharacter"));
 
 	DefaultPawnClass = MainCharacter.Class;
 
